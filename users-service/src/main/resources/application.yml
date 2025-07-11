@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: users-service
+  #    RABBITMQ
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+server:
+  port: 8081
+
+rabbitmq:
+  notifications:
+    queue: notifications-queue
+    routing_key: notifications.key123
+    exchange_name: notifications-exchange
+
+logging:
+  level:
+    pl:
+      alex: DEBUG
