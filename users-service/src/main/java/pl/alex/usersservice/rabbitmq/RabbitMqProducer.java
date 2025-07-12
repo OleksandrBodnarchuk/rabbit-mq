@@ -11,16 +11,16 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 class RabbitMqProducer {
 
-    @Value("${rabbitmq.notifications.exchange_name}")
+    @Value("${rabbitmq.users.exchange}")
     private String exchangeName;
 
-    @Value("${rabbitmq.notifications.routing_key}")
-    private String notificationsRoutingKey;
+    @Value("${rabbitmq.users.created.routing_key}")
+    private String usersCreatedRoutingKey;
 
     private final RabbitTemplate rabbitTemplate;
 
     public void sendMessage(String message) {
         log.info("[{}] - sending message to {}: {}", this.getClass().getSimpleName(), exchangeName, message);
-        rabbitTemplate.convertAndSend(exchangeName, notificationsRoutingKey, message);
+        rabbitTemplate.convertAndSend(exchangeName, usersCreatedRoutingKey, message);
     }
 }

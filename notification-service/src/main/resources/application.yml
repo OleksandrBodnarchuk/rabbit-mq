@@ -11,11 +11,12 @@ server:
   port: 8082
 
 rabbitmq:
-  notifications:
-    queue: notifications-queue
-    group: notifications-group
-    routing_key: notifications.key123
-    exchange_name: notifications-exchange
+  users:
+    group: users-group
+    exchange: users.exchange
+    all:
+      queue: users.all.queue
+      routing_key: users.*
 
 logging:
   level:

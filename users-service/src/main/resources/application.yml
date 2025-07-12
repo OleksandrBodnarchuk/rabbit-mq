@@ -11,10 +11,11 @@ server:
   port: 8081
 
 rabbitmq:
-  notifications:
-    queue: notifications-queue
-    routing_key: notifications.key123
-    exchange_name: notifications-exchange
+  users:
+    group: users-group
+    exchange: users.exchange
+    created:
+      routing_key: users.created
 
 logging:
   level:

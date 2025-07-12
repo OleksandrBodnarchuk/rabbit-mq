@@ -1,4 +1,4 @@
-package pl.alex.notificationservice.consumer;
+package pl.alex.notificationservice.users.consumer;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.rabbit.annotation.RabbitHandler;
@@ -7,8 +7,8 @@ import org.springframework.stereotype.Service;
 
 @Slf4j
 @Service
-@RabbitListener(queues = {"${rabbitmq.notifications.queue}"}, group = "${rabbitmq.notifications.group}")
-public class NotificationsConsumer {
+@RabbitListener(queues = {"${rabbitmq.users.all.queue}"}, group = "${rabbitmq.users.group}")
+public class UsersNotificationsConsumer {
 
     private static int count = 0;
 
