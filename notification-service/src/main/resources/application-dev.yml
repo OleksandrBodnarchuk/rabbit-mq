@@ -11,12 +11,12 @@ server:
   port: 8083
 
 rabbitmq:
-  users:
+  user:
     group: users-group
-    exchange: users.exchange
+    exchange: user.exchange
     all:
-      queue: users.all.queue
-      routing_key: users.*
+      queue: user.all.queue
+      routing_key: user.*
 
 logging:
   level:

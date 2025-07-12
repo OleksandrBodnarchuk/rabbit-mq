@@ -11,11 +11,11 @@ server:
   port: 8081
 
 rabbitmq:
-  users:
+  user:
     group: users-group
-    exchange: users.exchange
+    exchange: user.exchange
     created:
-      routing_key: users.created
+      routing_key: user.created
 
 logging:
   level:

@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 class RabbitMqConfig {
 
-    @Value("${rabbitmq.users.exchange}")
+    @Value("${rabbitmq.user.exchange}")
     private String exchangeName;
 
     @Bean

@@ -11,10 +11,10 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 class RabbitMqProducer {
 
-    @Value("${rabbitmq.users.exchange}")
+    @Value("${rabbitmq.user.exchange}")
     private String exchangeName;
 
-    @Value("${rabbitmq.users.created.routing_key}")
+    @Value("${rabbitmq.user.created.routing_key}")
     private String usersCreatedRoutingKey;
 
     private final RabbitTemplate rabbitTemplate;

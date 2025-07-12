@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 @Slf4j
 @Service
-@RabbitListener(queues = {"${rabbitmq.users.all.queue}"}, group = "${rabbitmq.users.group}")
+@RabbitListener(queues = {"${rabbitmq.user.all.queue}"}, group = "${rabbitmq.user.group}")
 public class UsersNotificationsConsumer {
 
     private static int count = 0;
