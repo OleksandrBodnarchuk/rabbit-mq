@@ -15,7 +15,7 @@ rabbitmq:
     group: users-group
     exchange: user.exchange
     created:
-      routing_key: user.created
+      key: user.created
 
 logging:
   level:

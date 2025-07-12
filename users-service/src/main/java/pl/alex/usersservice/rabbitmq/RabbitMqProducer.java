@@ -14,7 +14,7 @@ class RabbitMqProducer {
     @Value("${rabbitmq.user.exchange}")
     private String exchangeName;
 
-    @Value("${rabbitmq.user.created.routing_key}")
+    @Value("${rabbitmq.user.created.key}")
     private String usersCreatedRoutingKey;
 
     private final RabbitTemplate rabbitTemplate;

@@ -16,7 +16,12 @@ rabbitmq:
     exchange: user.exchange
     all:
       queue: user.all.queue
-      routing_key: user.*
+      key: user.*
+    dlt:
+      queue: user.dlt.queue
+      exchange: user.dlt.exchange
+      key: user.dlt
+      ttl: 5000
 
 logging:
   level:
